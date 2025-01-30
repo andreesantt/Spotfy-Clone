@@ -68,7 +68,16 @@ h1 {
 }
 
 .library .library__button {
+    display: flex;
     margin-right: 10px;
     color: #b3b3b3;
     background-color: transparent;
+    border: 0px;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "DM Sans", sans-serif;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    padding: 20px 10px;
 }
