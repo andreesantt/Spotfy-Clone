@@ -61,3 +61,14 @@ h1 {
     font-size: 14px;
     margin-top: 10px;
 }
+
+.library .library__content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.library .library__button {
+    margin-right: 10px;
+    color: #b3b3b3;
+    background-color: transparent;
+}
