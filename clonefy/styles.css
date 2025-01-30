@@ -6,6 +6,16 @@ h1 {
     color: #fff;
 }
 
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    Bottom: 0;
+    padding: 12px;
+    width: 300px;
+
+}
+
 .sidebar_navegation {
     background-color: #121212;
     border-radius: 8px;
