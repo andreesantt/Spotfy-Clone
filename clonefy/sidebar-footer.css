@@ -171,6 +171,20 @@ h1 {
     border: 20px;
 }
 
+.disclaimer-premium {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to right, #ae2896, #509bf5);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.disclaimer-premium .text {
+   flex-shrink: 0;
+}
+
 .disclaimer-premium .disclaimer-premium__tittle {
     color: #fff;
     text-transform: uppercase;
@@ -187,7 +201,7 @@ h1 {
 
 .disclaimer-premium button {
     background-color: #fff;
-    color: #000000;
+    color: #000;
     font-size: 16px;
     font-weight: bold;
     padding: 14px 30px;
