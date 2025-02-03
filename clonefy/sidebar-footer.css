@@ -169,6 +169,7 @@ h1 {
 }
 
 .disclaimer-premium {
+    color: #fff;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -177,7 +178,7 @@ h1 {
     padding: 15px 40px;
     display: flex;
     align-items: center; /* Alinhando o botão e o texto */
-    justify-content: space-between;
+    justify-content: space-between; /* Garante espaçamento adequado */
 }
 
 .disclaimer-text {
