@@ -114,9 +114,11 @@ header {
 }
 
 .card img {
-    width: 100%;
+    width: 120px; /* Tamanho ajustado */
+    height: 120px; /* Tamanho ajustado */
     border-radius: 8px;
     margin-bottom: 10px;
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
 }
 
 .card h3 {
@@ -171,14 +173,4 @@ footer {
 
 .progress-bar .slider {
     width: 100%;
-}
-
-.card img {
-    max-width: 100px; /* Tamanho máximo */
-    max-height: 100px; /* Tamanho máximo */
-    width: auto; /* Ajusta a largura automaticamente */
-    height: auto; /* Ajusta a altura automaticamente */
-    border-radius: 8px;
-    margin-bottom: 10px;
-    object-fit: cover;
 }

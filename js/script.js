@@ -1,17 +1,79 @@
-// Adicione interações JavaScript aqui, se necessário
 document.addEventListener('DOMContentLoaded', function () {
-    const playButton = document.querySelector('.controls .fa-play');
-    const audio = new Audio('assets/songs/song1.mp3'); // Adicione o caminho da música
+    const cards = document.querySelectorAll('.card'); // Seleciona todas as playlists
+    const audioPlayer = document.getElementById('audio-player'); // Player de áudio
+    const audioSource = document.getElementById('audio-source'); // Elemento <source> do player
+    const songTitle = document.querySelector('.song-info h4'); // Título da música
+    const songArtist = document.querySelector('.song-info p'); // Artista da música
+    const playPauseButton = document.getElementById('play-pause-button'); // Botão de play/pause
+    const prevButton = document.querySelector('.controls .fa-step-backward').parentElement; // Botão de retroceder
+    const nextButton = document.querySelector('.controls .fa-step-forward').parentElement; // Botão de avançar
 
-    playButton.addEventListener('click', function () {
-        if (audio.paused) {
-            audio.play();
-            playButton.classList.remove('fa-play');
-            playButton.classList.add('fa-pause');
+    // Lista de músicas
+    const songs = [
+        { src: 'assets/songs/song1.mp3', title: 'Valeu Natalina', artist: 'HITS NATALINOS' },
+        { src: 'assets/songs/song2.mp3', title: 'Mix Nobreak', artist: 'POP SEM PARAR' },
+        // Adicione mais músicas conforme necessário
+    ];
+
+    let currentSongIndex = 0; // Índice da música atual
+
+    // Função para carregar e reproduzir a música
+    function playMusic(songPath, title, artist) {
+        audioSource.src = songPath; // Define o caminho da música
+        audioPlayer.load(); // Carrega a música
+        audioPlayer.play(); // Reproduz a música
+
+        // Atualiza o título e o artista no player
+        songTitle.textContent = title;
+        songArtist.textContent = artist;
+
+        // Altera o ícone para "pause"
+        playPauseButton.innerHTML = '<i class="fas fa-pause"></i>';
+    }
+
+    // Função para tocar a música atual
+    function playCurrentSong() {
+        const currentSong = songs[currentSongIndex];
+        playMusic(currentSong.src, currentSong.title, currentSong.artist);
+    }
+
+    // Função para avançar para a próxima música
+    function nextSong() {
+        currentSongIndex = (currentSongIndex + 1) % songs.length; // Avança para a próxima música
+        playCurrentSong();
+    }
+
+    // Função para retroceder para a música anterior
+    function prevSong() {
+        currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length; // Retrocede para a música anterior
+        playCurrentSong();
+    }
+
+    // Adiciona um evento de clique a cada playlist
+    cards.forEach((card, index) => {
+        card.addEventListener('click', function () {
+            currentSongIndex = index; // Define a música atual como a selecionada
+            playCurrentSong(); // Reproduz a música
+        });
+    });
+
+    // Controle do botão de play/pause
+    playPauseButton.addEventListener('click', function () {
+        if (audioPlayer.paused) {
+            audioPlayer.play();
+            playPauseButton.innerHTML = '<i class="fas fa-pause"></i>';
         } else {
-            audio.pause();
-            playButton.classList.remove('fa-pause');
-            playButton.classList.add('fa-play');
+            audioPlayer.pause();
+            playPauseButton.innerHTML = '<i class="fas fa-play"></i>';
         }
     });
+
+    // Controle do botão de avançar
+    nextButton.addEventListener('click', nextSong);
+
+    // Controle do botão de retroceder
+    prevButton.addEventListener('click', prevSong);
+
+    // Reproduz a primeira música ao carregar a página
+    playCurrentSong();
 });
