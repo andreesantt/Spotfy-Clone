@@ -4,29 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotfy Imersão</title>
-    <link rel="stylesheet" href="sidebar-footer.css">
-    <link rel="stylesheet" href="vars.css">
-    <link rel="stylesheet" href="reset.css">
-    
-    <!-- Links para trazer os ícones via CDN -->
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css"/>
-
 </head>
 <body>
     <div class="sidebar">
         <nav class="sidebar_navegation">
             <div class="logo">
                 <a href="">
-                    <img src="/assets/icons/logo-spotify.png" alt="logo do spotfy">
+                    <img src="" alt="logo do spotfy">
                 </a>
                 <div>
                     <ul>
                         <li>
-                        <a href="">
-                            <span class="fa fa-home"></span>
-                            <span>Início</span>
-                        </a>
+                            <a href="">
+                                <span class="fa fa-home"></span>
+                                <span>Início</span>
+                            </a>
                         </li>
                         <li>
                             <a href="">
@@ -35,63 +30,81 @@
                             </a>
                         </li>
                     </ul>
-                </nav>
-
-                <div class="library">
-                    <div class="library__content">
-                        <button class="library__button">
-                            <span class="fa fas fa-book"></span>
-                            <span>Sua Biblioteca</span>
-                        </button>
-                        <span class="fa fa-plus"></span>
-                    </div>
-
-                    <section class="section-playlist">
-                        <div class="section-playlist__content">
-                            <span class="text tittle">Crie sua primeira playlist</span>
-                            <span class="text subtittle">É fácil, vamos te ajudar.</span>
-                            <button class="section-playlist__button">
-                                <span>Criar playlist</span>
-                            </button>
-                        </div>
-                    </section>
-
-                    <div class="cookies">
-                        <a href="">cookies</a>
-                    </div>
-
-                    <div class="languages">
-                        <button class="languages__button">
-                            <span class="fa fa-globe"></span>
-                            <span>Português do Brasil</span>
-                        </button>
-                    </div>
                 </div>
+            </div>
+        </nav>
+
+        <div class="library">
+            <div class="library__content">
+                <button class="library__button">
+                    <span class="fa fas fa-book"></span>
+                    <span>Sua Biblioteca</span>
+                </button>
+                <span class="fa fa-plus"></span>
+            </div>
+
+            <section class="section-playlist">
+                <div class="section-playlist__content">
+                    <span class="text tittle">Crie sua primeira playlist</span>
+                    <span class="text subtittle">É fácil, vamos te ajudar.</span>
+                    <button class="section-playlist__button">
+                        <span>Criar playlist</span>
+                    </button>
+                </div>
+            </section>
+
+            <div class="cookies">
+                <a href="">cookies</a>
+            </div>
+
+            <div class="languages">
+                <button class="languages__button">
+                    <span class="fa fa-globe"></span>
+                    <span>Português do Brasil</span>
+                </button>
             </div>
         </div>
+    </div>
 
-        <main>
-            <div class="main-container">
-                <nav class="header__navegation">
-                    <div class="header__navegation">
-                        <button class="arrow-left">
-                            <img src="" alt="">
-                        </button>
-                    </div>
-                </nav>
-            </div>
-        </main>
-
-        <footer>
-            <div class="disclaimer-premium">
-                <div class="disclaimer-text">
-                    <p class="disclaimer-premium__title">TESTAR O PREMIUM DE GRAÇA</p>
-                    <p class="disclaimer-premium__subtitle">
-                        Inscreva-se para curtir música ilimitada e podcasts só com alguns anúncios. Não precisa de cartão de crédito.
-                    </p>
+    <main>
+        <div class="main-container">
+            <nav class="header__navegation">
+                <div class="header__navegation">
+                    <button class="arrow-left">
+                        <img src="" alt="">
+                    </button>
                 </div>
-                <button type="button" class="subscribe-button">Inscreva-se grátis</button>
+            </nav>
+
+            <div class="playlist">
+                <h2>Playlist</h2>
+                <ul id="song-list">
+                    <li data-src="song1.mp3">Música 1</li>
+                    <li data-src="song2.mp3">Música 2</li>
+                    <li data-src="song3.mp3">Música 3</li>
+                </ul>
             </div>
-        </footer>
+            <div class="player">
+                <audio id="audio-player" controls>
+                    <source id="audio-source" src="" type="audio/mp3">
+                    Seu navegador não suporta o elemento de áudio.
+                </audio>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="disclaimer-premium">
+            <div class="disclaimer-text">
+                <p class="disclaimer-premium__title">TESTAR O PREMIUM DE GRAÇA</p>
+                <p class="disclaimer-premium__subtitle">
+                    Inscreva-se para curtir música ilimitada e podcasts só com alguns anúncios. Não precisa de cartão de crédito.
+                </p>
+            </div>
+            <button type="button" class="subscribe-button">Inscreva-se grátis</button>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
