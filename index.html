@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+            <img src="assets/icons/logo-spotify.png" alt="Logo Spotify"> <!-- Adicione o caminho da sua logo -->
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-home"></i>
+                        <span>Início</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-search"></i>
+                        <span>Buscar</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-book"></i>
+                        <span>Sua Biblioteca</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="playlist-section">
+            <button class="create-playlist">
+                <i class="fas fa-plus"></i>
+                <span>Criar playlist</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <header>
+            <div class="header-nav">
+                <button class="nav-button">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="nav-button">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            <div class="user-profile">
+                <img src="assets/icons/imagem_de_perfil2.jpg" alt="Foto do usuário"> <!-- Adicione o caminho da foto do usuário -->
+            </div>
+        </header>
+
+        <section class="playlist-grid">
+            <h2>Boa tarde</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="assets/playlist/1.jpeg" alt="Playlist 1"> <!-- Adicione o caminho da imagem -->
+                    <h3>Valeu Natalina</h3>
+                    <p>HITS NATALINOS</p>
+                </div>
+                <div class="card">
+                    <img src="assets/playlist/2.png" alt="Playlist 2"> <!-- Adicione o caminho da imagem -->
+                    <h3>Mix Nobreak</h3>
+                    <p>POP SEM PARAR</p>
+                </div>
+                <div class="card">
+                    <img src="assets/playlist/3.jpeg" alt="Playlist 3"> <!-- Adicione o caminho da imagem -->
+                    <h3>Rock Classics</h3>
+                    <p>As melhores do rock</p>
+                </div>
+                <div class="card">
+                    <img src="assets/playlist/4.jpeg" alt="Playlist 4"> <!-- Adicione o caminho da imagem -->
+                    <h3>Hip-Hop Hits</h3>
+                    <p>Os maiores sucessos do hip-hop</p>
+                </div>
+                <div class="card">
+                    <img src="assets/playlist/5.jpeg" alt="Playlist 5"> <!-- Adicione o caminho da imagem -->
+                    <h3>Chill Vibes</h3>
+                    <p>Músicas para relaxar</p>
+                </div>
+                <div class="card">
+                    <img src="assets/playlist/6.jpeg" alt="Playlist 6"> <!-- Adicione o caminho da imagem -->
+                    <h3>Dance Party</h3>
+                    <p>Músicas para dançar</p>
+                </div>
+                <!-- Adicione mais cards conforme necessário -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Player -->
+    <footer>
+        <div class="player-controls">
+            <div class="song-info">
+                <img src="assets/playlist/15.jpeg" alt="Capa da música atual"> <!-- Adicione o caminho da imagem -->
+                <div>
+                    <h4>Isso é sério</h4>
+                    <p>Matuê</p>
+                </div>
+            </div>
+            <div class="controls">
+                <button><i class="fas fa-random"></i></button>
+                <button><i class="fas fa-step-backward"></i></button>
+                <button><i class="fas fa-play"></i></button>
+                <button><i class="fas fa-step-forward"></i></button>
+                <button><i class="fas fa-redo"></i></button>
+            </div>
+            <div class="progress-bar">
+                <input type="range" min="0" max="100" value="0" class="slider">
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
