@@ -4,15 +4,15 @@ document.addEventListener('DOMContentLoaded', function () {
     const audioSource = document.getElementById('audio-source'); // Elemento <source> do player
     const songTitle = document.querySelector('.song-info h4'); // Título da música
     const songArtist = document.querySelector('.song-info p'); // Artista da música
-    const playPauseButton = document.getElementById('play-pause-button'); // Botão de play/pause
+    const playPauseButton = document.querySelector('.controls .fa-play').parentElement; // Botão de play/pause
     const prevButton = document.querySelector('.controls .fa-step-backward').parentElement; // Botão de retroceder
     const nextButton = document.querySelector('.controls .fa-step-forward').parentElement; // Botão de avançar
 
     // Lista de músicas
     const songs = [
-        { src: 'assets/songs/song1.mp3', title: 'Valeu Natalina', artist: 'HITS NATALINOS' },
+        { src: 'assets/songs/Matuê - Isso é Sério ft. Brandão.mp3', title: 'Isso é Sério', artist: 'Matuê' },
         { src: 'assets/songs/song2.mp3', title: 'Mix Nobreak', artist: 'POP SEM PARAR' },
-        // Adicione mais músicas conforme necessário
+        { src: 'assets/songs/song3.mp3', title: 'Nova Música', artist: 'Novo Artista' }, // Nova música adicionada
     ];
 
     let currentSongIndex = 0; // Índice da música atual
